@@ -1,0 +1,10 @@
+.adobe
+.cache
+.ccache
+.macromedia
+.thumbnails
+tmp
+.vim*.tmp
+.vim/swap
+*~
+\#*\#
