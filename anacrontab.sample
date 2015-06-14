@@ -1,7 +1,9 @@
+# Example /etc/anacrontab
 SHELL=/bin/sh
 PATH=/bin:/usr/bin
 
 RANDOM_DELAY=45
 START_HOURS_RANGE=3-22
 
+# period in days | delay in minutes | job-identifier | command
 1 5 rsync.backup nice ~user/bin/backup.sh ~user/ user@nas:/mnt/backups
