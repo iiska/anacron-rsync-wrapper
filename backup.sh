@@ -4,10 +4,12 @@ SRC="$1"
 DST="$2"
 
 if [ -f "${SRC}.rsync-excludes" ]; then
-  EXCLUDES="${SRC}.rsync-excludes"
+  EXCLUDES="--exclude-from=${SRC}.rsync-excludes"
 elif [ -f "~/.rsync-excludes" ]; then
-  EXCLUDES="~/.rsync-excludes"
+  EXCLUDES="--exclude-from=~/.rsync-excludes"
+else
+  EXCLUDES=""
 fi
 
-rsync -av --delete --delete-excluded --exclude-from="$EXCLUDES" "$SRC" "$DST"
+rsync -av --delete --delete-excluded "$EXCLUDES" "$SRC" "$DST"
 
