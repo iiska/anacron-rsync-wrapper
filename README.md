@@ -30,7 +30,9 @@ Excluding unwanted files
 Backup script will look source directory and $HOME of user running the script
 for *.rsync-excludes* file listing patterns for files which should be excluded.
 
-See *rsync-excludes.sample* for example and documentation for **--exclude-from**
+See
+[*rsync-excludes.sample*](https://github.com/iiska/anacron-rsync-wrapper/blob/master/rsync-excludes.sample)
+for example and documentation for **--exclude-from**
 option in [rsync manpage](https://download.samba.org/pub/rsync/rsync.html) for
 more info.
 
